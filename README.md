@@ -16,6 +16,24 @@ Build in current directory (ensure Docker is running):
 
 e.g. `docker build -t rysharp/dotnettemplate:first`
 
-Run:
+Run - add the port (`-p`) argument to expose the port:
 
-`docker run <hub-user>/<repo-name>[:<tag>]`
+`docker run -p 5000:5000 <hub-user>/<repo-name>[:<tag>]`
+
+Use `--name` to set the container name, otherwise the container name is generated for you as below.
+
+![Container in Docker Dashboard](img/container.png)
+
+## Push to DockerHub
+
+Commit the container:
+
+`docker commit <existing-container> <hub-user>/<repo-name>[:<tag>]`
+
+e.g. `docker commit admiring_tharp rysharp/dotnettemplate:first`
+
+Push the container:
+
+`docker push <hub-user>/<repo-name>:<tag>`
+
+e.g. `docker push rysharp/dotnettemplate:first`
