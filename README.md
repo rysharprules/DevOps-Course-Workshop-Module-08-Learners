@@ -7,3 +7,15 @@ If you attended workshop 7, you should continue working with the same repository
 During this workshop follow the instructions in [during_workshop_8.md](./during_workshop_8.md).
 
 Workshop 7's instructions are included to refresh your memory or in case you would like to go back and attempt those stretch goals.
+
+## Build locally
+
+Build in current directory (ensure Docker is running):
+
+`docker build -t <hub-user>/<repo-name>[:<tag>] .`
+
+e.g. `docker build -t rysharp/dotnettemplate:first`
+
+Run:
+
+`docker run <hub-user>/<repo-name>[:<tag>]`
